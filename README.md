@@ -1,2 +1,2 @@
-# get-docker-secret
+# docker-secret
 Utility for retrieving docker secrets.
