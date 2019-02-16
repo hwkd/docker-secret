@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "rootDir": "src",
+    "sourceRoot": "src",
+    "sourceMap": true,
+    "outDir": "dist",
+    "noImplicitAny": true,
+    "composite": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+}

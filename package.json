@@ -1,19 +1,35 @@
 {
   "name": "docker-secret",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/hwkd/docker-secret"
   },
   "description": "Utility for retrieving docker secrets.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "ts-mocha src/**/*.test.ts"
   },
-  "keywords": ["docker", "secrets", "swarm"],
+  "keywords": [
+    "docker",
+    "secrets",
+    "swarm"
+  ],
   "author": "Justin Kim <justinkimkorea@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": ">= 6"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.9.4",
+    "@types/rimraf": "^2.0.2",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "rimraf": "^2.6.3",
+    "ts-mocha": "^2.0.0",
+    "typescript": "^3.3.3"
   }
 }
