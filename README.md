@@ -1,4 +1,4 @@
-# docker-secret
+# docker-secret ![](https://img.shields.io/travis/hwkd/docker-secret.svg?style=flat)
 Utility for retrieving docker secrets.
 
 ## Usage
