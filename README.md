@@ -17,3 +17,12 @@ expect(secrets.X_KEY).to.equal("x"); // true
 expect(secrets.Y_KEY).to.equal("y"); // true
 expect(secrets.Z_KEY).to.equal("z"); // true
 ```
+
+You can also use `getSecret(key)`
+```
+import { getSecret } from "docker-secret"
+
+expect(getSecret("X_KEY")).to.equal("x"); // true
+expect(getSecret("Y_KEY")).to.equal("y"); // true
+expect(getSecret("Z_KEY")).to.equal("z"); // true
+```
