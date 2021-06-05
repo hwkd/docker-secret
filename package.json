@@ -10,6 +10,7 @@
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
+    "clean": "rimraf ./dist",
     "test": "ts-mocha src/**/*.test.ts",
     "release": "release-it"
   },
@@ -31,7 +32,7 @@
     "chai": "^4.2.0",
     "mocha": "^8.4.0",
     "release-it": "^14.7.0",
-    "rimraf": "^2.6.3",
+    "rimraf": "^2.7.1",
     "ts-mocha": "^2.0.0",
     "typescript": "^3.3.3"
   }

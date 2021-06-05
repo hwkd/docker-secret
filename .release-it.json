@@ -4,6 +4,6 @@
   },
   "hooks": {
     "before:init": "npm test",
-    "after:bump": "npm run build"
+    "after:bump": "npm run clean && npm run build"
   }
 }
