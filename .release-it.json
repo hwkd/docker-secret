@@ -1,5 +1,9 @@
 {
   "github": {
     "release": true
+  },
+  "hooks": {
+    "before:init": "npm test",
+    "after:bump": "npm run build"
   }
 }
