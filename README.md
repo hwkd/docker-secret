@@ -36,6 +36,9 @@ const secrets = getSecrets<Credentials>(secretDir);
 secrets.USERNAME // no error
 secrets.PASSWORD // no error
 secrets.RANDOM // error
+
+// You can also call the function without any argument to load secrets from `/run/secrets` by default.
+const secrets = getSecrets<Credentials>();
 ```
 
 ### `getSecret(key)`
