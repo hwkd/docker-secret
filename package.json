@@ -8,6 +8,7 @@
   "description": "Utility for retrieving docker secrets.",
   "main": "dist/index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "tsc",
     "test": "ts-mocha src/**/*.test.ts",
     "release": "release-it"
