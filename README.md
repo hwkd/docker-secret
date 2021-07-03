@@ -24,8 +24,8 @@ You can read secrets from a directory you define. This is useful for loading sec
 import { join } from "path";
 import { getSecrets } from "docker-secret";
 
-const secretDir = join(__dirname, "secrets");
-const secrets = getSecrets(secretDir);
+// Define where to load secrets from via environment variable.
+const secrets = getSecrets(process.env.SECRET_DIR);
 
 // Also supports typings
 type Credentials = {
