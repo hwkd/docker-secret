@@ -13,7 +13,7 @@ export type GetSecretFn<S extends Secrets = Secrets> = (
 ) => S[keyof S];
 
 export function getSecrets<T extends Secrets = Secrets>(secretDir?: string): T {
-  const _secretDir = secretDir || SECRET_DIR;  
+  const _secretDir = secretDir || SECRET_DIR;
 
   const secrets: Secrets = {};
   if (fs.existsSync(_secretDir)) {
@@ -22,7 +22,7 @@ export function getSecrets<T extends Secrets = Secrets>(secretDir?: string): T {
     files.forEach((file) => {
       const fullPath = path.join(_secretDir, file);
       const key = file;
-      if(fs.lstatSync(fullPath).isDirectory()) return;
+      if (fs.lstatSync(fullPath).isDirectory()) return;
       const data = fs.readFileSync(fullPath, "utf8").toString().trim();
 
       secrets[key] = data;
