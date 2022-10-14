@@ -2,9 +2,8 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "typeRoots": ["node_modules/@types", "src/types"],
-    "rootDir": "src",
-    "sourceRoot": "src",
+    "rootDir": "lib",
+    "sourceRoot": "lib",
     "sourceMap": true,
     "outDir": "dist",
     "noImplicitAny": true,
@@ -17,6 +16,8 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
+  "include": ["lib/**/*"]
 }

@@ -62,3 +62,5 @@ typings/
 
 # ignore dist files
 dist
+
+tsconfig.tsbuildinfo
