@@ -1,5 +1,5 @@
-import fs from "fs";
 import path from "path";
+import { existsSync, readdirSync, lstatSync, readFileSync } from "fs";
 
 // Default secrets directory.
 export const SECRET_DIR = "/run/secrets";
@@ -16,20 +16,15 @@ export function getSecrets<T extends Secrets = Secrets>(secretDir?: string): T {
   const _secretDir = secretDir || SECRET_DIR;
 
   const secrets: Secrets = {};
-  if (fs.existsSync(_secretDir)) {
-    const files = fs.readdirSync(_secretDir);
-
-    files.forEach((file) => {
+  if (existsSync(_secretDir)) {
+    readdirSync(_secretDir).forEach((file) => {
       const fullPath = path.join(_secretDir, file);
-      const key = file;
 
-      if (fs.lstatSync(fullPath).isDirectory()) {
+      if (lstatSync(fullPath).isDirectory()) {
         return;
       }
 
-      const data = fs.readFileSync(fullPath, "utf8").toString().trim();
-
-      secrets[key] = data;
+      secrets[file] = readFileSync(fullPath, "utf8").trim();
     });
   }
 
