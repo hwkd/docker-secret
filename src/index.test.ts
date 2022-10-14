@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs";
 import rimraf from "rimraf";
 import { expect } from "chai";
-import { getSecretFactory, getSecrets } from "./index";
+import { getSecrets } from "./index";
 
 type Secrets = {
   USERNAME: string;
@@ -28,10 +28,6 @@ describe("Test module", function () {
           const secrets = getSecrets<Secrets>(folder);
           expect(secrets).to.haveOwnProperty("USERNAME").that.equals(username);
           expect(secrets).to.haveOwnProperty("PASSWORD").that.equals(password);
-
-          const getSecret = getSecretFactory(secrets);
-          expect(getSecret("USERNAME")).to.equal(username);
-          expect(getSecret("PASSWORD")).to.equal(password);
         })
         .finally(() => {
           rimraf(folder, (error: any) => done(error));
