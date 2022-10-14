@@ -7,6 +7,10 @@
   },
   "description": "Utility for retrieving docker secrets.",
   "main": "dist/index.js",
+  "files": [
+    "dist/**/*",
+    "lib/**/*"
+  ],
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
