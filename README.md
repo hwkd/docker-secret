@@ -26,12 +26,11 @@ mongoose.connect(
 );
 ```
 
-### `getSecrets(dir)`
+### `getSecrets<Secrets>(dir?: string): Secrets`
 
 You can read secrets from a directory you define. This is useful for loading secrets from a different directory during development.
 
 ```ts
-import { join } from "path";
 import { getSecrets } from "docker-secret";
 
 // Without typings works fine
